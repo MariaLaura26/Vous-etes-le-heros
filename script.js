@@ -10,14 +10,14 @@ let chaptersObj = {
      subtitle:'Princess kidnapée',
      text:"La princess à été kidnapée par l'ennemie Vous voulez faire quoi?",
      img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/princess_kidnapee.png",
-     options:[""],
+     options:["rien faire, la sauver"],
 
 },
 demande_laide:{
-    subtitle:'',
-    text:'',
-    img:'',
-    options:[""],
+    subtitle:"Il demande de l'aide à son frère",
+    text:"Mario ne peut pas reussir cette mision tout seul alors il demande de l'aide à son frère",
+    img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/3822da082d15211dcb9096e6202caae1b28f3e4b/assets/img/4f9c330_posLbw6FNSTIZNjzB3FnY_ca.jpg",
+    options:["Il n'accepte pas, il accepte"],
 },
 lac_rempli:{
     subtitle:'',
@@ -25,7 +25,7 @@ lac_rempli:{
     img:'',
     options:["nager,ils prennent le bateau qui est à côté"],
 },
-bateau_qui_coule:{
+le_bateau_coule:{
     subtitle:'',
     text:'',
     img:'',
@@ -62,3 +62,7 @@ princess_sauve:{
     options:[""],
 },
 };
+
+function goToChapter(chapterName){
+const =" ",
+}
