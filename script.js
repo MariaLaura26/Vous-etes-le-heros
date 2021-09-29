@@ -13,6 +13,13 @@ let chaptersObj = {
      options:["rien faire, la sauver"],
 
 },
+rien_faire:{
+    subtitle:'Mangé par une bête sauvage',
+    text:'',
+    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/d80359ded36a6d0e45c477bd40645c9a49cf7569/assets/img/1611257680_super-mario-3d-world-bowsers-fury.jpg',
+    options:["début du jeu"],
+
+},
 demande_laide:{
     subtitle:"Il demande de l'aide à son frère",
     text:"Mario ne peut pas reussir cette mision tout seul alors il demande de l'aide à son frère",
@@ -20,16 +27,22 @@ demande_laide:{
     options:["Il n'accepte pas, il accepte"],
 },
 lac_rempli:{
-    subtitle:'',
-    text:'',
-    img:'',
+    subtitle:'Lac rempli des piranhas',
+    text:'Vous êtes arrivé dans un lac rempli des piranhas',
+    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8d8ba2753719a1f024e73a475df16848b9dd5c16/assets/img/10759678.jpg',
     options:["Nager,ils prennent le bateau qui est à côté"],
 },
 le_bateau_coule:{
     subtitle:'',
     text:'',
-    img:'',
+    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/c7fe2f3f2569df3c0f6b20b142fc22d96dd10476/assets/img/istockphoto-1257129389-170667a.jpg',
     options:[""],
+},
+na_ger:{
+subtitle:'',
+text:'',
+img:'',
+options:['']
 },
 les_sauve:{
     subtitle:'',
@@ -64,5 +77,7 @@ princess_sauve:{
 };
 
 function goToChapter(chapterName){
-let chapitre = 'chaptersObj';
+const chapitre = chapterName;
+console.log(chapitre.subtitle);
+console.log(chapitre.text);
 }
