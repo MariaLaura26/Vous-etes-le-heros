@@ -1,5 +1,5 @@
 
-let chaptersObj= {
+let chaptersObj = {
      le_reveil: {
         subtitle:'Mario se lève',
         text:'Mario se lève et entend à la radio que la princess a été kidnapée',
