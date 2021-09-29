@@ -23,7 +23,7 @@ lac_rempli:{
     subtitle:'',
     text:'',
     img:'',
-    options =["nager,ils prennent le bateau qui est à côté"],
+    options:["Nager,ils prennent le bateau qui est à côté"],
 },
 le_bateau_coule:{
     subtitle:'',
