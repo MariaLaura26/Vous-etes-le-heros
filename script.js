@@ -3,13 +3,13 @@ let chaptersObj = {
      le_reveil: {
         subtitle:'Mario se lève',
         text:'Mario se lève et entend à la radio que la princess a été kidnapée',
-        img:'assets/img/mario_se_leve',
+        img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/mario_se_leve.jpg",
         options:["continuer"],
 },
  la_princess:{
-     subtitle:'',
-     text:'',
-     img:'',
+     subtitle:'Princess kidnapée',
+     text:"La princess à été kidnapée par l'ennemie Vous voulez faire quoi?",
+     img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/princess_kidnapee.png",
      options:[""],
 
 },
