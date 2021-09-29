@@ -23,46 +23,46 @@ lac_rempli:{
     subtitle:'',
     text:'',
     img:'',
-    options:["nager,ils prennent le bateau qui est à côté"],
+    options = ["nager,ils prennent le bateau qui est à côté"],
 },
 le_bateau_coule:{
     subtitle:'',
     text:'',
     img:'',
-    options:[""],
+    options = [""],
 },
 les_sauve:{
     subtitle:'',
     text:'',
     img:'',
-    options:[""],
+    options =[""],
 },
 la_foret:{
     subtitle:'',
     text:'',
     img:'',
-    options:[""],
+    options = [""],
 },
 ils_trouevent_la_cachette:{
     subtitle:'',
     text:'',
     img:'',
-    options:[""],
+    options = [""],
 },
 avez_vous_les_cles:{
     subtitle:'',
     text:'',
     img:'',
-    options:[""],
+    options = [""],
 },
 princess_sauve:{
     subtitle:'',
     text:'',
     img:'',
-    options:[""],
+    options = [""],
 },
 };
 
 function goToChapter(chapterName){
-const =" ",
+let chapitre = 'chaptersObj';
 }
