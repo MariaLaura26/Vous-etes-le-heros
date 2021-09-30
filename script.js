@@ -76,7 +76,7 @@ princess_sauve:{
 },
 };
 
-function goToChapter(chapterName){
+function gotochapter(chapterName){
 const chapitre = chapterName;
 console.log(chapitre.subtitle);
 console.log(chapitre.text);
