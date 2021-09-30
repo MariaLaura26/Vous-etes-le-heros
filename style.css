@@ -2,6 +2,9 @@
     font-family: "Mapolicetitre";
     src: url(assets/fonte/) format(woff2);
 }
+html{
+    height: 100%;
+}
 body{
     height: 800px;
     background-color: #fbf230;

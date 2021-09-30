@@ -13,7 +13,6 @@ let chaptersObj = {
      options:["rien faire, la sauver"],
 
 },
-
 demande_laide:{
     subtitle:"Il demande de l'aide à son frère",
     text:"Mario ne peut pas réussir cette mission tout seul alors il demande de l'aide à son frère",
