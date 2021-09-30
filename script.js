@@ -8,7 +8,7 @@ let chaptersObj = {
 },
  la_princess:{
      subtitle:'Princess kidnapée',
-     text:"La princess à été kidnapée par l'ennemie Vous voulez faire quoi?",
+     text:"La princess à été kidnapée, tu es le seul espoir qu'il reste",
      img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/princess_kidnapee.png",
      options:["rien faire, la sauver"],
 
@@ -16,19 +16,19 @@ let chaptersObj = {
 
 demande_laide:{
     subtitle:"Il demande de l'aide à son frère",
-    text:"Mario ne peut pas reussir cette mision tout seul alors il demande de l'aide à son frère",
+    text:"Mario ne peut pas réussir cette mission tout seul alors il demande de l'aide à son frère",
     img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/3822da082d15211dcb9096e6202caae1b28f3e4b/assets/img/4f9c330_posLbw6FNSTIZNjzB3FnY_ca.jpg",
     options:["Il n'accepte pas, il accepte"],
 },
 lac_rempli:{
     subtitle:'Lac rempli des piranhas',
-    text:'Vous êtes arrivé dans un lac rempli des piranhas',
+    text:'Tu es arrivé dans un lac rempli des piranhas',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8d8ba2753719a1f024e73a475df16848b9dd5c16/assets/img/10759678.jpg',
     options:["Nager,ils prennent le bateau qui est à côté"],
 },
 les_sauve:{
-    subtitle:'',
-    text:'',
+    subtitle:'Tu as été sauvé',
+    text:'Dragon vous a sauvé la vie ',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/3c8981f71b27b2271817a7eb3d08100942c0a06b/assets/img/film-super-mario-bros-sortie-2022-e1549100004926.jpg',
     options:[""],
 },
@@ -58,8 +58,9 @@ princess_sauve:{
 },
 };
 
-function gotochapter(chapterName){
+function goToChapter(chapterName){
 const chapitre = chapterName;
-console.log(chapitre.subtitle);
-console.log(chapitre.text);
-}
+
+console.log(chapterName.subtitle);
+console.log(chapterName.text);
+};
