@@ -16,14 +16,14 @@ const chaptersObj = {
      subtitle:'Princess kidnapée',
      text:"La princess à été kidnapée, tu es le seul espoir qu'il reste",
      img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/princess_kidnapee.png",
-     options:[
+     options: [
          {
              text:"Rien faire",
-             action:"goToChapter('mangez_par')"
-         }
+             action:'goToChapter(`mangez_par`)',
+         },
          {
              text:"Sauver la princess",
-             action:"goToChapter('demande_laide')",
+             action:'goToChapter(`demande_laide`)',
          }
         ]
 
