@@ -1,16 +1,16 @@
 
-let chaptersObj = {
-     le_reveil: {
-        subtitle:'Mario se lève',
+const chaptersObj = {
+     chapter1: {
+        subtitle:'le reveil',
         text:'Mario se lève et entend à la radio que la princess a été kidnapée',
         img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/mario_se_leve.jpg",
         options: [
-            (continuer = {
+             {
                 text:"Continuer",
-                action:"goToChapter('la_princess')",
+                action:'goToChapter(`la_princess`)',
 
-            }),
-        ],
+            }
+        ]
 },
  la_princess:{
      subtitle:'Princess kidnapée',
@@ -82,8 +82,8 @@ princess_sauve:{
 },
 };
 
-function goToChapter(chapterName){
-const chapitre = ("chapterName");
-console.log(chapterName.subtitle);
-console.log(chapterName.text);
-};
+function goToChapter(chapterName) {
+    let chapter = chaptersObj[chapterName];
+console.log(chapter.subtitle)
+console.log(chapter.text)
+}
