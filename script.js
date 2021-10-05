@@ -101,31 +101,86 @@ les_sauve:{
     subtitle:'Tu as été sauvé',
     text:'Dragon vous a sauvé la vie ',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/3c8981f71b27b2271817a7eb3d08100942c0a06b/assets/img/film-super-mario-bros-sortie-2022-e1549100004926.jpg',
-    options:[""],
+    options:[
+        {
+            text:"Continuer",
+            action:'goToChapitre(`la_foret`)',
+        },
+    ]
 },
 la_foret:{
     subtitle:'',
     text:'',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/881c370b1479e92a3d132566321c1c147b5d31f9/assets/img/mario-bros.jpg',
-    options: ["ils abandonnent,continuet à marcher"],
+    options: [
+        {
+          text:"Vous voulez abandonné la mission?",
+          options:'goToChapitre(`morts_par_balle`)',
+        },
+        {
+            text:"Continuer à marcher",
+            action:'goTochapitre(`ils_trouvent_la_cachette`)',
+        },
+    ]
+},
+morts_par_ball:{
+    subtitle:"",
+    text:"",
+    img:"",
+    options:[
+        {
+            text:"Continuer",
+            action:'goToChapitre(`le_reveil`)',
+        },
+    ]
 },
 ils_trouevent_la_cachette:{
     subtitle:'',
     text:'',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/33b177e65d7529d972e8e604a97fccbf315a5d08/assets/img/the_super_mario_bros._super_show.jpg',
-    options: [""],
+    options: [
+        {
+        text:"Continuer",
+        action:'goToChapitre(`avez_vous_les_cles`)',
+        },
+    ]
 },
 avez_vous_les_cles:{
     subtitle:'',
     text:'',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/33b177e65d7529d972e8e604a97fccbf315a5d08/assets/img/67029641-dessin-d-or-en-forme-de-cl%C3%A9-coeur-illustration-vectorielle-eps-10.jpg',
-    options:["non,oui"],
+    options:[
+{
+    text:"Oui",
+    action:'goToChapitre(`princess_sauve`)',
+},
+{
+    text:"Non",
+    action:'goToChapitre(`morts_par_lennemie`)',
+},
+    ]
+},
+morts_par_lennemie:{
+    subtitle:"",
+    text:"",
+    img:"",
+    options:[
+        {
+            text:"Continuer",
+            action:'goToChapitre(`le_reveil`)',
+        },
+    ]
 },
 princess_sauve:{
     subtitle:'',
     text:'',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/640d618735559fca2c392704d1a0e14ef3f23424/assets/img/52069d36f025bf8f0400207857adbd41.jpg',
-    options:[""],
+    options:[
+        {
+            text:"Recommencer",
+            action:'goToChapitre(`le_reveil`)',
+        },
+    ]
 },
 };
 
