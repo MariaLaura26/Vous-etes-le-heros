@@ -33,22 +33,69 @@ mangez_par:{
     text:"",
     img:"",
     options:[
-        (continuer = {
-            action:"goToChapitre('le_reveil')"
-        }
-        )],
+        { 
+            text:"Continuer",
+            action:'goToChapitre(`le_reveil`)',
+        },
+        ]
 },
 demande_laide:{
     subtitle:"Il demande de l'aide à son frère",
     text:"Mario ne peut pas réussir cette mission tout seul alors il demande de l'aide à son frère",
     img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/3822da082d15211dcb9096e6202caae1b28f3e4b/assets/img/4f9c330_posLbw6FNSTIZNjzB3FnY_ca.jpg",
-    options:["Il n'accepte pas, il accepte"],
+    options:[
+        {
+            text:"Il accepte",
+            action:'goToChapitre(`lac_rempli`)',
+
+        },
+            {
+                text:"il n'accepte pas",
+                action:'goToChapitre(`ils_tombent_dans_un_trou`)',
+            },
+    ]
+},
+ils_tombent_dans_un_trou:{
+    subtitle:"Vouz avez tombé dans un trou",
+    text:"",
+    img:"",
+    options:[
+        {
+            text:"Continuer",
+            action:'goToChapitre(`chapter1`)',
+        },
+    ]
+
 },
 lac_rempli:{
     subtitle:'Lac rempli des piranhas',
     text:'Tu es arrivé dans un lac rempli des piranhas',
     img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8d8ba2753719a1f024e73a475df16848b9dd5c16/assets/img/10759678.jpg',
-    options:["Nager,ils prennent le bateau qui est à côté"],
+    options:[
+        {
+            text:"nager",
+            action:'goToChapitre(`mangez_par`)',
+        },
+        {
+            text:"sauter",
+            action:'goToChapitre(`les_sauve`)',
+        },
+        {
+            text:"prendre le bateau qui est à côté",
+            action:'goToChapitre(`les_cles`)',
+        },
+    ]
+},
+les_cles:{
+    subtitle:"Vouz avez trouvé les clès",
+    text:"",
+    img:"",
+    options:[
+        {
+        text:"Continuer",
+        action:'goToChapitre(`le_reveil`)',
+        }
+    ]
 },
 les_sauve:{
     subtitle:'Tu as été sauvé',
