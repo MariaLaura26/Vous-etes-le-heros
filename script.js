@@ -2,14 +2,14 @@
 const chaptersObj = {
      chapter1: {
         subtitle:'le reveil',
-        text:'Mario se lève et entend à la radio que la princess a été kidnapée',
+        text:`Mario se lève et entend à la radio que la princess a été kidnapée`,
         img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/mario_se_leve.jpg",
         options: [
              {
                 text:"Continuer",
                 action:'goToChapter(`la_princess`)',
 
-            }
+            },
         ]
 },
  la_princess:{
@@ -24,7 +24,7 @@ const chaptersObj = {
          {
              text:"Sauver la princess",
              action:'goToChapter(`demande_laide`)',
-         }
+         },
         ]
 
 },
@@ -35,7 +35,7 @@ mangez_par:{
     options:[
         { 
             text:"Continuer",
-            action:'goToChapitre(`le_reveil`)',
+            action:'goToChapter(`le_reveil`)',
         },
         ]
 },
@@ -46,12 +46,12 @@ demande_laide:{
     options:[
         {
             text:"Il accepte",
-            action:'goToChapitre(`lac_rempli`)',
+            action:'goToChapter(`lac_rempli`)',
 
         },
             {
                 text:"il n'accepte pas",
-                action:'goToChapitre(`ils_tombent_dans_un_trou`)',
+                action:'goToChapter(`ils_tombent_dans_un_trou`)',
             },
     ]
 },
@@ -62,7 +62,7 @@ ils_tombent_dans_un_trou:{
     options:[
         {
             text:"Continuer",
-            action:'goToChapitre(`chapter1`)',
+            action:'goToChapter(`chapter1`)',
         },
     ]
 
@@ -74,15 +74,15 @@ lac_rempli:{
     options:[
         {
             text:"nager",
-            action:'goToChapitre(`mangez_par`)',
+            action:'goToChapter(`mangez_par`)',
         },
         {
             text:"sauter",
-            action:'goToChapitre(`les_sauve`)',
+            action:'goToChapter(`les_sauve`)',
         },
         {
             text:"prendre le bateau qui est à côté",
-            action:'goToChapitre(`les_cles`)',
+            action:'goToChapter(`les_cles`)',
         },
     ]
 },
@@ -93,7 +93,7 @@ les_cles:{
     options:[
         {
         text:"Continuer",
-        action:'goToChapitre(`le_reveil`)',
+        action:'goToChapter(`le_reveil`)',
         }
     ]
 },
@@ -104,7 +104,7 @@ les_sauve:{
     options:[
         {
             text:"Continuer",
-            action:'goToChapitre(`la_foret`)',
+            action:'goToChapter(`la_foret`)',
         },
     ]
 },
@@ -115,11 +115,11 @@ la_foret:{
     options: [
         {
           text:"Vous voulez abandonné la mission?",
-          options:'goToChapitre(`morts_par_balle`)',
+          options:'goToChapter(`morts_par_balle`)',
         },
         {
             text:"Continuer à marcher",
-            action:'goTochapitre(`ils_trouvent_la_cachette`)',
+            action:'goTochapter(`ils_trouvent_la_cachette`)',
         },
     ]
 },
@@ -130,7 +130,7 @@ morts_par_ball:{
     options:[
         {
             text:"Continuer",
-            action:'goToChapitre(`le_reveil`)',
+            action:'goToChapter(`le_reveil`)',
         },
     ]
 },
@@ -141,7 +141,7 @@ ils_trouevent_la_cachette:{
     options: [
         {
         text:"Continuer",
-        action:'goToChapitre(`avez_vous_les_cles`)',
+        action:'goToChapter(`avez_vous_les_cles`)',
         },
     ]
 },
@@ -152,11 +152,11 @@ avez_vous_les_cles:{
     options:[
 {
     text:"Oui",
-    action:'goToChapitre(`princess_sauve`)',
+    action:'goToChapter(`princess_sauve`)',
 },
 {
     text:"Non",
-    action:'goToChapitre(`morts_par_lennemie`)',
+    action:'goToChapter(`morts_par_lennemie`)',
 },
     ]
 },
@@ -167,7 +167,7 @@ morts_par_lennemie:{
     options:[
         {
             text:"Continuer",
-            action:'goToChapitre(`le_reveil`)',
+            action:'goToChapter(`le_reveil`)',
         },
     ]
 },
@@ -178,14 +178,13 @@ princess_sauve:{
     options:[
         {
             text:"Recommencer",
-            action:'goToChapitre(`le_reveil`)',
+            action:'goToChapter(`le_reveil`)',
         },
     ]
 },
 };
 
-function goToChapter(chapterName) {
-    let chapter = chaptersObj[chapterName];
-console.log(chapter.subtitle)
-console.log(chapter.text)
+function goToChapter(chapterName) { 
+console.log(chaptersObj[chapterName].subtitle);
+console.log(chaptersObj[chapterName].text);
 }
