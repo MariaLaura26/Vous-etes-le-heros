@@ -187,4 +187,4 @@ princess_sauve:{
 function goToChapter(chapterName) { 
 console.log(chaptersObj[chapterName].subtitle);
 console.log(chaptersObj[chapterName].text);
-}dd
+}
