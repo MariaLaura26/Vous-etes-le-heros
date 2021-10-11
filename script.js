@@ -14,7 +14,7 @@ const chaptersObj = {
 },
  la_princess:{
      subtitle:'Princess kidnapée',
-     text:"La princess à été kidnapée, tu es le seul espoir qu'il reste",
+     text:"La princess faissais sa sieste comme d'habitude. D'un coup quelqu'un est entré dans sa chambre et l'a kidnapée, tu es le seul espoir qu'il reste!!!",
      img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/princess_kidnapee.png",
      options: [
          {
@@ -31,7 +31,7 @@ const chaptersObj = {
 mangez_par:{
     subtitle:"Vous avez été mangé par un animal sauvage",
     text:"",
-    img:"",
+    img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/a62d42ba6e1eaaebaedf7369b9c00ed8fb2fbe5d/assets/img/Bowser_SSBU.png",
     options:[
         { 
             text:"Continuer",
