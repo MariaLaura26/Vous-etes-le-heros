@@ -1,9 +1,9 @@
 
 const chaptersObj = {
      chapter1: {
-        subtitle:'le reveil',
+        subtitle:'Le reveil',
         text:`Vous vous  levez et vouz entendez à la radio que la princess a été kidnapée`,
-        img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/mario_se_leve.jpg",
+        img:"assets/img/Mario-35th-anniversary-Paper-Mario-remasters-scaled.jpg",
         options: [
              {
                 text:"Continuer",
@@ -31,7 +31,7 @@ const chaptersObj = {
 mangez_par:{
     subtitle:"Vous avez été mangé par un animal sauvage",
     text:"",
-    img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/a62d42ba6e1eaaebaedf7369b9c00ed8fb2fbe5d/assets/img/Bowser_SSBU.png",
+    img:"assets/img/1611257680_super-mario-3d-world-bowsers-fury.jpg",
     options:[
         { 
             text:"Continuer",
@@ -42,7 +42,7 @@ mangez_par:{
 demande_laide:{
     subtitle:"Vous demandez de l'aide à votre frère",
     text:"Vouz ne pouvez pas réussir cette mission tout seul alors vous demandez de l'aide à votre frère. Travailler en équipe est toujours mieux",
-    img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/3822da082d15211dcb9096e6202caae1b28f3e4b/assets/img/4f9c330_posLbw6FNSTIZNjzB3FnY_ca.jpg",
+    img:"assets/img/mario-bros.jpg",
     options:[
         {
             text:"Il accepte",
@@ -58,7 +58,7 @@ demande_laide:{
 ils_tombent_dans_un_trou:{
     subtitle:"Vous et votre frère vous tombés dans un trou",
     text:"Vous et Luigi(votre frère) marchiez pour retour à la maison. Tout d'un coup vouz êtes tombés dans un trou",
-    img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/9e473c9d0d0711d0427d157fc2cda583c813b5a5/assets/img/111-1118745_mario-and-luigi-download-transparent-png-image-transparent.png",
+    img:"assets/img/111-1118745_mario-and-luigi-download-transparent-png-image-transparent.png",
     options:[
         {
             text:"Continuer",
@@ -70,7 +70,7 @@ ils_tombent_dans_un_trou:{
 lac_rempli:{
     subtitle:'Lac rempli des piranhas',
     text:'Vous acceptez de continuer cette mission. Lorque vous marchez, vous arrivez dans un lac rempli des piranhas vous avez trois options ',
-    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8d8ba2753719a1f024e73a475df16848b9dd5c16/assets/img/10759678.jpg',
+    img:"assets/img/10759678.jpg",
     options:[
         {
             text:"nager",
@@ -89,7 +89,7 @@ lac_rempli:{
 les_cles:{
     subtitle:"Vouz avez trouvé les clès",
     text:"Malgré que  le bateau a coulé, vous avez trouvez les clès pour pouvoir sauver la princess",
-    img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/9e473c9d0d0711d0427d157fc2cda583c813b5a5/assets/img/67029641-dessin-d-or-en-forme-de-cl%C3%A9-coeur-illustration-vectorielle-eps-10.jpg",
+    img:"assets/img/67029641-dessin-d-or-en-forme-de-clé-coeur-illustration-vectorielle-eps-10.jpg",
     options:[
         {
         text:"Continuer",
@@ -100,7 +100,7 @@ les_cles:{
 les_sauve:{
     subtitle:'Vous avez été sauvé',
     text:'Votre bon ami Dragon a vu que vous aviez des ennuis et est venu vous sauver',
-    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/3c8981f71b27b2271817a7eb3d08100942c0a06b/assets/img/film-super-mario-bros-sortie-2022-e1549100004926.jpg',
+    img:"assets/img/film-super-mario-bros-sortie-2022-e1549100004926.jpg",
     options:[
         {
             text:"Continuer",
@@ -111,7 +111,7 @@ les_sauve:{
 la_foret:{
     subtitle:'Vous êtes arrivés dans la forêt',
     text:"Vous avez réussi à échapper tous les difficultés jusqu'à maintenant. Il vous reste quelques étapes avant de finir:)",
-    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/881c370b1479e92a3d132566321c1c147b5d31f9/assets/img/mario-bros.jpg',
+    img:"assets/img/the_super_mario_bros._super_show.jpg",
     options: [
         {
           text:"Vous voulez abandonné la mission?",
@@ -126,7 +126,7 @@ la_foret:{
 ils_trouevent_la_cachette:{
     subtitle:'Felicitations vous avez trouvé la cachette',
     text:'La cachette est juste devant vous, je vous felicite',
-    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/33b177e65d7529d972e8e604a97fccbf315a5d08/assets/img/the_super_mario_bros._super_show.jpg',
+    img:"assets/img/162864-mario.jpg",
     options: [
         {
         text:"Continuer",
@@ -137,7 +137,7 @@ ils_trouevent_la_cachette:{
 avez_vous_les_cles:{
     subtitle:'Les clès',
     text:'Pendant votre chemin est-ce que vous avez trouvé les clès? pour pouvoir ouvrir la porte',
-    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/33b177e65d7529d972e8e604a97fccbf315a5d08/assets/img/67029641-dessin-d-or-en-forme-de-cl%C3%A9-coeur-illustration-vectorielle-eps-10.jpg',
+    img:"assets/img/unnamed (1).jpg",
     options:[
 {
     text:"Oui",
@@ -152,7 +152,7 @@ avez_vous_les_cles:{
 morts_par_lennemie:{
     subtitle:"L'ennemie arrive",
     text:"Pendant que vous cherchiez la clès, l'ennemie les a vus et vous a attaqué ",
-    img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/fbf65eaf4d567f7cbeb7f8f285ad27cd7691bd31/assets/img/1884667.jpg",
+    img:"assets/img/Bowser_SSBU.png",
     options:[
         {
             text:"Continuer",
@@ -163,7 +163,7 @@ morts_par_lennemie:{
 princess_sauve:{
     subtitle:'Vous avez réussi',
     text:'Felicitations vous avez sauvé la princess!!!!!!!!',
-    img:'https://github.com/MariaLaura26/Vous-etes-le-heros/blob/640d618735559fca2c392704d1a0e14ef3f23424/assets/img/52069d36f025bf8f0400207857adbd41.jpg',
+    img:"assets/img/52069d36f025bf8f0400207857adbd41.jpg",
     options:[
         {
             text:"Recommencer",
