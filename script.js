@@ -15,7 +15,7 @@ const chaptersObj = {
  la_princess:{
      subtitle:'Princess kidnapée',
      text:"La princess faissais sa sieste comme d'habitude. D'un coup quelqu'un est entré dans sa chambre et l'a kidnapée, Tu es le seul espoir qu'il reste!!!",
-     img:"https://github.com/MariaLaura26/Vous-etes-le-heros/blob/8be926cafaaa7c33e25333f17e34f6a629279e9e/assets/img/princess_kidnapee.png",
+     img:"assets/img/princess_kidnapee.png",
      options: [
          {
              text:"Rien faire",
@@ -174,6 +174,13 @@ princess_sauve:{
 };
 
 function goToChapter(chapterName) { 
+let titre = document.querySelector(".chapter");
+let texte = document.querySelector(".txt");
+let img = document.querySelector(".img");
+
+titre.innerHTML =chaptersObj[chapterName].subtitle;
+texte.innerHTML =chaptersObj[chapterName].text;
+img.innerHTML =`<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
 console.log(chaptersObj[chapterName].subtitle);
 console.log(chaptersObj[chapterName].text);
 }

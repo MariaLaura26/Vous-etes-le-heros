@@ -22,11 +22,11 @@ body{
     width: 800px;
     height: 700px;
 }
-.p2{
+.txt{
     font-family:'Glory', sans-serif;
     margin: 10px 10px 10px 10px;
 }
-.p1{
+.chapter{
     font-family: 'Glory',sans-serif;
     font-weight: bold;
     font-size: 30px;
