@@ -6,11 +6,12 @@ html{
     height: 100%;
 }
 body{
-    height: 800px;
+    height: 700px;
     background-color: #fbf230;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 0;
 }
 .game{
     display: flex;
@@ -20,7 +21,7 @@ body{
     background-color: #f477dc;
     border-radius: 15px 15px 15px 15px;
     width: 800px;
-    height: 700px;
+    height: 600px;
 }
 .txt{
     font-family:'Glory', sans-serif;
