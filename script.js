@@ -183,8 +183,7 @@ texte.innerHTML =chaptersObj[chapterName].text;
 img.innerHTML =`<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
 console.log(chaptersObj[chapterName].subtitle);
 console.log(chaptersObj[chapterName].text);
-console.log(chaptersObj[chapterName].options);
-console.log(chaptersObj[chapterName].options.action);
+
 
 for (let options = 0; options < chaptersObj[chapterName].options.length; options ++){
 
