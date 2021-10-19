@@ -1,4 +1,12 @@
 
+let keyFounded = false;
+(lescles = function(){
+if (keyFounded ==true){
+    goToChapter(`princess_sauve`);
+}else{
+    goToChapter(`morts_par_lennemie`);
+}
+});
 const chaptersObj = {
      chapter1: {
         subtitle:'Le reveil',
@@ -35,7 +43,7 @@ mangez_par:{
     options:[
         { 
             text:"Continuer",
-            action:'goToChapter(`le_reveil`)',
+            action:'goToChapter(`chapter1`)',
         },
         ]
 },
@@ -93,7 +101,7 @@ les_cles:{
     options:[
         {
         text:"Continuer",
-        action:'goToChapter(`le_reveil`)',
+        action:'goToChapter(`chapter1`)',
         }
     ]
 },
@@ -110,16 +118,12 @@ les_sauve:{
 },
 la_foret:{
     subtitle:'Vous êtes arrivés dans la forêt',
-    text:"Vous avez réussi à échapper tous les difficultés jusqu'à maintenant. Il vous reste quelques étapes avant de finir:)",
+    text:"Vous avez réussi à échapper tous les difficultés jusqu'à maintenant. Il vous reste quelques étapes avant de finir",
     img:"assets/img/the_super_mario_bros._super_show.jpg",
     options: [
         {
-          text:"Vous voulez abandonné la mission?",
-          options:'goToChapter(`mangez_par`)',
-        },
-        {
             text:"Continuer à marcher",
-            action:'goTochapter(`ils_trouvent_la_cachette`)',
+            action:'goToChapter(`ils_trouevent_la_cachette`)',
         },
     ]
 },
@@ -141,7 +145,7 @@ avez_vous_les_cles:{
     options:[
 {
     text:"Oui",
-    action:'goToChapter(`princess_sauve`)',
+    action:"lescles()",
 },
 {
     text:"Non",
@@ -156,7 +160,7 @@ morts_par_lennemie:{
     options:[
         {
             text:"Continuer",
-            action:'goToChapter(`le_reveil`)',
+            action:'goToChapter(`chapter1`)',
         },
     ]
 },
@@ -167,7 +171,7 @@ princess_sauve:{
     options:[
         {
             text:"Recommencer",
-            action:'goToChapter(`le_reveil`)',
+            action:'goToChapter(`chapter1`)',
         },
     ]
 },
@@ -177,6 +181,7 @@ function goToChapter(chapterName) {
 let titre = document.querySelector(".chapter");
 let texte = document.querySelector(".txt");
 let img = document.querySelector(".img");
+let barre = document.querySelector(".barre");
 
 titre.innerHTML =chaptersObj[chapterName].subtitle;
 texte.innerHTML =chaptersObj[chapterName].text;
@@ -184,8 +189,10 @@ img.innerHTML =`<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`
 console.log(chaptersObj[chapterName].subtitle);
 console.log(chaptersObj[chapterName].text);
 
-
-for (let options = 0; options < chaptersObj[chapterName].options.length; options ++){
-
+let optionbtn = "";
+for(let index = 0; index < chaptersObj[chapterName].options.length; index++){
+const barre = chaptersObj[chapterName].options[index].action;
+optionbtn +=`<div class="barre"><button type="button" onclick ="${chaptersObj[chapterName].options[index].action}">${chaptersObj[chapterName].options[index].text}</button>`;
 }
+barre.innerHTML = optionbtn;
 }
