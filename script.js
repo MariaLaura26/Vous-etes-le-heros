@@ -1,7 +1,7 @@
 
 let keyFounded = false;
 (lescles = function(){
-if (keyFounded ==true){
+if (keyFounded = true){
     goToChapter(`princess_sauve`);
 }else{
     goToChapter(`morts_par_lennemie`);
@@ -145,7 +145,7 @@ avez_vous_les_cles:{
     options:[
 {
     text:"Oui",
-    action:"lescles()",
+    action:'lescles()',
 },
 {
     text:"Non",
