@@ -196,3 +196,5 @@ optionbtn +=`<div class="barre"><button type="button" onclick ="${chaptersObj[ch
 }
 barre.innerHTML = optionbtn;
 }
+goToChapter(`chapter1`);
+
