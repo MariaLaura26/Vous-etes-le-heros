@@ -21,7 +21,7 @@ body{
     background-color: #f477dc;
     border-radius: 15px 15px 15px 15px;
     width: 800px;
-    height: 600px;
+    min-height: 600px;
 }
 .txt{
     font-family:'Glory', sans-serif;
@@ -37,7 +37,7 @@ h1{
 }
 
 img{
-    height: 300px;
+    height: auto;
     width: 500px;
 }
 

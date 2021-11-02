@@ -1,39 +1,39 @@
 
 let keyFounded = false;
-(lescles = function(){
-if (keyFounded = true){
+function lescles() {
+if (keyFounded === true) {
     goToChapter(`princess_sauve`);
-}else{
+} else {
     goToChapter(`morts_par_lennemie`);
 }
-});
+};
 const chaptersObj = {
      chapter1: {
-        subtitle:'Le reveil',
+        subtitle:"Le reveil",
         text:`Vous vous  levez et vouz entendez à la radio que la princess a été kidnapée`,
         img:"assets/img/Mario-35th-anniversary-Paper-Mario-remasters-scaled.jpg",
         options: [
              {
                 text:"Continuer",
-                action:'goToChapter(`la_princess`)',
+                action:"goToChapter(`la_princess`)",
 
             },
-        ]
+        ],
 },
  la_princess:{
-     subtitle:'Princess kidnapée',
+     subtitle:"Princess kidnapée",
      text:"La princess faissais sa sieste comme d'habitude. D'un coup quelqu'un est entré dans sa chambre et l'a kidnapée, Tu es le seul espoir qu'il reste!!!",
      img:"assets/img/princess_kidnapee.png",
      options: [
          {
              text:"Rien faire",
-             action:'goToChapter(`mangez_par`)',
+             action:"goToChapter(`mangez_par`)",
          },
          {
              text:"Sauver la princess",
-             action:'goToChapter(`demande_laide`)',
+             action:"goToChapter(`demande_laide`)",
          },
-        ]
+        ],
 
 },
 mangez_par:{
@@ -43,25 +43,25 @@ mangez_par:{
     options:[
         { 
             text:"Continuer",
-            action:'goToChapter(`chapter1`)',
+            action:"goToChapter(`chapter1`)",
         },
-        ]
+        ],
 },
 demande_laide:{
     subtitle:"Vous demandez de l'aide à votre frère",
     text:"Vouz ne pouvez pas réussir cette mission tout seul alors vous demandez de l'aide à votre frère. Travailler en équipe est toujours mieux",
     img:"assets/img/mario-bros.jpg",
-    options:[
+    options: [
         {
             text:"Il accepte",
-            action:'goToChapter(`lac_rempli`)',
+            action:"goToChapter(`lac_rempli`)",
 
         },
             {
                 text:"il n'accepte pas",
-                action:'goToChapter(`ils_tombent_dans_un_trou`)',
+                action:"goToChapter(`ils_tombent_dans_un_trou`)",
             },
-    ]
+    ],
 },
 ils_tombent_dans_un_trou:{
     subtitle:"Vous et votre frère vous tombés dans un trou",
@@ -72,8 +72,7 @@ ils_tombent_dans_un_trou:{
             text:"Continuer",
             action:'goToChapter(`chapter1`)',
         },
-    ]
-
+],
 },
 lac_rempli:{
     subtitle:'Lac rempli des piranhas',
@@ -82,17 +81,17 @@ lac_rempli:{
     options:[
         {
             text:"nager",
-            action:'goToChapter(`mangez_par`)',
+            action:"goToChapter(`mangez_par`)",
         },
         {
             text:"sauter",
-            action:'goToChapter(`les_sauve`)',
+            action:"goToChapter(`les_sauve`)",
         },
         {
             text:"prendre le bateau qui est à côté",
             action:'goToChapter(`les_cles`)',
         },
-    ]
+    ],
 },
 les_cles:{
     subtitle:"Vouz avez trouvé les clès",
@@ -101,20 +100,20 @@ les_cles:{
     options:[
         {
         text:"Continuer",
-        action:'goToChapter(`chapter1`)',
+        action:"goToChapter(`chapter1`)",
         }
-    ]
+    ],
 },
 les_sauve:{
     subtitle:'Vous avez été sauvé',
-    text:'Votre bon ami Dragon a vu que vous aviez des ennuis et est venu vous sauver',
+    text:"Votre bon ami Dragon a vu que vous aviez des ennuis et est venu vous sauver",
     img:"assets/img/film-super-mario-bros-sortie-2022-e1549100004926.jpg",
     options:[
         {
             text:"Continuer",
-            action:'goToChapter(`la_foret`)',
+            action:"goToChapter(`la_foret`)",
         },
-    ]
+    ],
 },
 la_foret:{
     subtitle:'Vous êtes arrivés dans la forêt',
@@ -123,35 +122,35 @@ la_foret:{
     options: [
         {
             text:"Continuer à marcher",
-            action:'goToChapter(`ils_trouevent_la_cachette`)',
+            action:"goToChapter(`ils_trouevent_la_cachette`)",
         },
-    ]
+    ],
 },
 ils_trouevent_la_cachette:{
-    subtitle:'Felicitations vous avez trouvé la cachette',
-    text:'La cachette est juste devant vous, je vous felicite',
+    subtitle:"Felicitations vous avez trouvé la cachette",
+    text:"La cachette est juste devant vous, je vous felicite",
     img:"assets/img/162864-mario.jpg",
     options: [
         {
         text:"Continuer",
-        action:'goToChapter(`avez_vous_les_cles`)',
+        action:"goToChapter(`avez_vous_les_cles`)",
         },
-    ]
+    ],
 },
 avez_vous_les_cles:{
-    subtitle:'Les clès',
-    text:'Pendant votre chemin est-ce que vous avez trouvé les clès? pour pouvoir ouvrir la porte',
+    subtitle:"Les clès",
+    text:"Pendant votre chemin est-ce que vous avez trouvé les clès? pour pouvoir ouvrir la porte",
     img:"assets/img/unnamed (1).jpg",
     options:[
 {
     text:"Oui",
-    action:'lescles()',
+    action:"lescles()",
 },
 {
     text:"Non",
-    action:'goToChapter(`morts_par_lennemie`)',
+    action:"goToChapter(`morts_par_lennemie`)",
 },
-    ]
+    ],
 },
 morts_par_lennemie:{
     subtitle:"L'ennemie arrive",
@@ -160,20 +159,20 @@ morts_par_lennemie:{
     options:[
         {
             text:"Continuer",
-            action:'goToChapter(`chapter1`)',
+            action:"goToChapter(`chapter1`)",
         },
-    ]
+    ],
 },
 princess_sauve:{
-    subtitle:'Vous avez réussi',
-    text:'Felicitations vous avez sauvé la princess!!!!!!!!',
+    subtitle:"Vous avez réussi",
+    text:"Felicitations vous avez sauvé la princess!!!!!!!!",
     img:"assets/img/52069d36f025bf8f0400207857adbd41.jpg",
     options:[
         {
             text:"Recommencer",
-            action:'goToChapter(`chapter1`)',
+            action:"goToChapter(`chapter1`)",
         },
-    ]
+    ],
 },
 };
 
