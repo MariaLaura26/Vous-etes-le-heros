@@ -12,6 +12,7 @@ const chaptersObj = {
     chapter1: {
       subtitle: "Le reveil",
       text: `Vous vous  levez et vouz entendez à la radio que la princess a été kidnapée`,
+      video: "assets/giphy (2).mp4",
       img: "assets/img/Mario-35th-anniversary-Paper-Mario-remasters-scaled.jpg",
       options: [
         {
@@ -74,6 +75,7 @@ const chaptersObj = {
       },
       lac_rempli: {
         subtitle: "Lac rempli des piranhas",
+        video:"assets/giphy.mp4",
         text: "Vous acceptez de continuer cette mission. Lorque vous marchez, vous arrivez dans un lac rempli des piranhas vous avez trois options ",
         img: "assets/img/10759678.jpg",
         options: [
