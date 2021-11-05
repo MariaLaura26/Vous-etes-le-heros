@@ -1,12 +1,14 @@
 
 let keyFounded = false;
+
 function lescles() {
-if (keyFounded === true) {
-    goToChapter(`princess_sauve`);
-} else {
-    goToChapter(`morts_par_lennemie`);
-}
-};
+    if (keyFounded === true) {
+        goToChapter(`princess_sauve`);
+    } else {
+        goToChapter(`morts_par_lennemie`);
+    }
+    };
+  
 const chaptersObj = {
      chapter1: {
         subtitle:"Le reveil",
@@ -70,7 +72,7 @@ ils_tombent_dans_un_trou:{
     options:[
         {
             text:"Continuer",
-            action:'goToChapter(`chapter1`)',
+            action:"goToChapter(`chapter1`)",
         },
 ],
 },
@@ -89,7 +91,7 @@ lac_rempli:{
         },
         {
             text:"prendre le bateau qui est à côté",
-            action:'goToChapter(`les_cles`)',
+            action:"goToChapter(`les_cles`)",
         },
     ],
 },
@@ -101,7 +103,7 @@ les_cles:{
         {
         text:"Continuer",
         action:"goToChapter(`chapter1`)",
-        }
+        },
     ],
 },
 les_sauve:{
