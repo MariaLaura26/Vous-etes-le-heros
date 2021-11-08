@@ -182,10 +182,16 @@ let texte = document.querySelector(".txt");
 let img = document.querySelector(".img");
 let barre = document.querySelector(".barre");
 
+
 titre.innerHTML =chaptersObj[chapterName].subtitle;
 texte.innerHTML =chaptersObj[chapterName].text;
-img.innerHTML =`<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
 
+
+if( chaptersObj && chaptersObj[chapterName].video){
+  img.innerHTML=`<video src="${chaptersObj[chapterName].video}"autoplay loop muted></video>`;
+} else {
+  img.innerHTML =`<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
+}
 
 console.log(chaptersObj[chapterName].subtitle);
 console.log(chaptersObj[chapterName].text);
@@ -196,5 +202,6 @@ optionbtn +=`<div class="barre"><button type="button" onclick ="${chaptersObj[ch
 }
 barre.innerHTML = optionbtn;
 }
+
 goToChapter(`chapter1`);
 
