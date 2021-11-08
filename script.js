@@ -181,6 +181,8 @@ let titre = document.querySelector(".chapter");
 let texte = document.querySelector(".txt");
 let img = document.querySelector(".img");
 let barre = document.querySelector(".barre");
+let audio = new Audio("assets/mixkit-magical-stone-slide-1528.mp3");
+audio.play();
 
 
 titre.innerHTML =chaptersObj[chapterName].subtitle;
