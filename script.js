@@ -1,14 +1,15 @@
 
 let keyFounded = false;
 
-function lescles(){
-  localStorage.getItem("keyFounded",`${keyFounded}`)
+function lescles() {
     if(keyFounded == true){
         goToChapter(`princess_sauve`);
+        localStorage.getItem("keyFounded",`${keyFounded}`);
     } else {
         goToChapter(`morts_par_lennemie`);
     }
 };
+
 const chaptersObj = {
     chapter1: {
       subtitle: "Le reveil",
@@ -208,13 +209,16 @@ barre.innerHTML = optionbtn;
 
 }
 
-
 let chapterr = "";
 if(chapterr != undefined){
   chapterr = localStorage.getItem("chapter");
   goToChapter(chapterr);
-  key = localStorage.getItem("keyFounded",`${keyFounded}`);
 } else {
   goToChapter(`chapter1`);
 };
- 
+
+if(keyFounded == true){
+  goToChapter(`princess_sauve`)
+} else {
+  goToChapter(`chapter1`);
+}
