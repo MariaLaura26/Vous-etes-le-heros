@@ -2,6 +2,7 @@
 let keyFounded = false;
 
 function lescles(){
+  localStorage.getItem("keyFounded",`${keyFounded}`)
     if(keyFounded == true){
         goToChapter(`princess_sauve`);
     } else {
@@ -18,9 +19,9 @@ const chaptersObj = {
         {
           text: "Continuer",
           action: "goToChapter(`la_princess`)",
-        },
+        }, 
       ],
-    },
+    }, 
     la_princess: {
       subtitle: "Princess kidnapée",
       text: "La princess faissais sa sieste comme d'habitude. D'un coup quelqu'un est entré dans sa chambre et l'a kidnapée, Tu es le seul espoir qu'il reste!!!",
@@ -183,6 +184,7 @@ let img = document.querySelector(".img");
 let barre = document.querySelector(".barre");
 let audio = new Audio("assets/mixkit-magical-stone-slide-1528.mp3");
 audio.play();
+localStorage.setItem("chapter", `${chapterName}`);
 
 
 titre.innerHTML =chaptersObj[chapterName].subtitle;
@@ -203,7 +205,16 @@ for(let index = 0; index < chaptersObj[chapterName].options.length; index++){
 optionbtn +=`<div class="barre"><button type="button" onclick ="${chaptersObj[chapterName].options[index].action}">${chaptersObj[chapterName].options[index].text}</button>`;
 }
 barre.innerHTML = optionbtn;
+
 }
 
-goToChapter(`chapter1`);
 
+let chapterr = "";
+if(chapterr != undefined){
+  chapterr = localStorage.getItem("chapter");
+  goToChapter(chapterr);
+  key = localStorage.getItem("keyFounded",`${keyFounded}`);
+} else {
+  goToChapter(`chapter1`);
+};
+ 
