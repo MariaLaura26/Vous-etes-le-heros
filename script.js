@@ -1,10 +1,19 @@
+let audio = new Audio("assets/mixkit-magical-stone-slide-1528.mp3");
 
-let keyFounded = false;
+let keyFounded = false; // keyFounded non trouvé par défaut (false)
+if (localStorage.getItem("keyFounded") != null) { // Est-ce que keyfounded est sauvegardé dans localStorage?
+  keyFounded = localStorage.getItem("keyFounded"); // Si oui, donnons la valeur à keyfounded de ce qu'il  y a de sauvegardé.
+}
+
+function trouverCles() { // Function appellée lorsque les clés sont trouvées, 
+  keyFounded = true; // On change la valeur de la variable
+  localStorage.setItem("keyFounded", true); // On sauvegarde le tout
+  goToChapter(`chapter1`); // Finalement on retourne au chapitre de départ
+}
 
 function lescles() {
     if(keyFounded == true){
         goToChapter(`princess_sauve`);
-        localStorage.getItem("keyFounded",`${keyFounded}`);
     } else {
         goToChapter(`morts_par_lennemie`);
     }
@@ -97,12 +106,12 @@ const chaptersObj = {
       },
       les_cles: {
         subtitle: "Vouz avez trouvé les clès",
-        text: "Malgré que  le bateau a coulé, vous avez trouvez les clès pour pouvoir sauver la princess",
+        text: "Malgré que le bateau a coulé, vous avez trouvez les clès pour pouvoir sauver la princess",
         img: "assets/img/67029641-dessin-d-or-en-forme-de-clé-coeur-illustration-vectorielle-eps-10.jpg",
         options: [
           {
             text: "Continuer",
-            action: "goToChapter(`chapter1`)",
+            action: "trouverCles()",
           },
         ],
       },
@@ -179,46 +188,36 @@ const chaptersObj = {
     };
 
 function goToChapter(chapterName) { 
-let titre = document.querySelector(".chapter");
-let texte = document.querySelector(".txt");
-let img = document.querySelector(".img");
-let barre = document.querySelector(".barre");
-let audio = new Audio("assets/mixkit-magical-stone-slide-1528.mp3");
-audio.play();
-localStorage.setItem("chapter", `${chapterName}`);
+  let titre = document.querySelector(".chapter");
+  let texte = document.querySelector(".txt");
+  let img = document.querySelector(".img");
+  let barre = document.querySelector(".barre");
 
+  audio.currentTime = 0;
+  audio.play();
+  localStorage.setItem("chapter", chapterName);
 
-titre.innerHTML =chaptersObj[chapterName].subtitle;
-texte.innerHTML =chaptersObj[chapterName].text;
+  titre.innerHTML =chaptersObj[chapterName].subtitle;
+  texte.innerHTML =chaptersObj[chapterName].text;
 
+  if( chaptersObj && chaptersObj[chapterName].video){
+    img.innerHTML=`<video src="${chaptersObj[chapterName].video}"autoplay loop muted></video>`;
+  } else {
+    img.innerHTML =`<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
+  }
 
-if( chaptersObj && chaptersObj[chapterName].video){
-  img.innerHTML=`<video src="${chaptersObj[chapterName].video}"autoplay loop muted></video>`;
-} else {
-  img.innerHTML =`<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
+  console.log(chaptersObj[chapterName].subtitle);
+  console.log(chaptersObj[chapterName].text);
+
+  let optionbtn = "";
+  for(let index = 0; index < chaptersObj[chapterName].options.length; index++){
+    optionbtn +=`<div class="barre"><button type="button" onclick ="${chaptersObj[chapterName].options[index].action}">${chaptersObj[chapterName].options[index].text}</button>`;
+  }
+  barre.innerHTML = optionbtn;
 }
 
-console.log(chaptersObj[chapterName].subtitle);
-console.log(chaptersObj[chapterName].text);
-
-let optionbtn = "";
-for(let index = 0; index < chaptersObj[chapterName].options.length; index++){
-optionbtn +=`<div class="barre"><button type="button" onclick ="${chaptersObj[chapterName].options[index].action}">${chaptersObj[chapterName].options[index].text}</button>`;
+let currentchapter = 'chapter1'; // Chapitre de départ par défaut
+if (localStorage.getItem("chapter") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?
+  currentchapter = localStorage.getItem("chapter") // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
 }
-barre.innerHTML = optionbtn;
-
-}
-
-let chapterr = "";
-if(chapterr != undefined){
-  chapterr = localStorage.getItem("chapter");
-  goToChapter(chapterr);
-} else {
-  goToChapter(`chapter1`);
-};
-
-if(keyFounded == true){
-  goToChapter(`princess_sauve`)
-} else {
-  goToChapter(`chapter1`);
-}
+goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
