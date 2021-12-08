@@ -1,4 +1,3 @@
-let audio = new Audio("assets/mixkit-magical-stone-slide-1528.mp3");
 
 let keyFounded = false; // keyFounded non trouvé par défaut (false)
 if (localStorage.getItem("keyFounded") != null) { // Est-ce que keyfounded est sauvegardé dans localStorage?
@@ -18,6 +17,11 @@ function lescles() {
         goToChapter(`morts_par_lennemie`);
     }
 };
+
+
+let declancheraudio = true;
+
+
 
 const chaptersObj = {
     chapter1: {
@@ -187,14 +191,26 @@ const chaptersObj = {
       },
     };
 
+    let audio = new Audio("assets/mixkit-magical-stone-slide-1528.mp3");
+    let son = document.getElementById("son");
+    son.addEventListener('change', function(){
+      if(declancheraudio == true){
+         declancheraudio = false;
+      } else {
+        declancheraudio = true;
+      }
+    })
+    
 function goToChapter(chapterName) { 
   let titre = document.querySelector(".chapter");
   let texte = document.querySelector(".txt");
   let img = document.querySelector(".img");
   let barre = document.querySelector(".barre");
+  const body = document.querySelector("body");
+  const game = document.querySelector('.game');
+  body.className = chapterName;
 
-  audio.currentTime = 0;
-  audio.play();
+  
   localStorage.setItem("chapter", chapterName);
 
   titre.innerHTML =chaptersObj[chapterName].subtitle;
@@ -214,7 +230,27 @@ function goToChapter(chapterName) {
     optionbtn +=`<div class="barre"><button type="button" onclick ="${chaptersObj[chapterName].options[index].action}">${chaptersObj[chapterName].options[index].text}</button>`;
   }
   barre.innerHTML = optionbtn;
+
+  if( declancheraudio === true){
+    audio.play();
+    audio.currentTime = 0;
+    } 
 }
+
+
+  
+
+let reset = document.querySelector(".reset");
+reset.addEventListener("click", function(){
+  function reset(){
+    keyFounded = false
+    localStorage.clear()
+    goToChapter(`chapter1`);
+  }
+  return reset()
+})
+
+
 
 let currentchapter = 'chapter1'; // Chapitre de départ par défaut
 if (localStorage.getItem("chapter") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?

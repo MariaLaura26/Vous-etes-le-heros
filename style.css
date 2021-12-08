@@ -2,16 +2,17 @@
     font-family: "Mapolicetitre";
     src: url(assets/fonte/) format(woff2);
 }
-html{
+html,body{
     height: 100%;
+    margin:0;
 }
 body{
     height: 700px;
     background-color: #fbf230;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 .game{
     display: flex;
@@ -52,3 +53,58 @@ button{
 background-color: #28caef;
 font-family: 'Glory',sans-serif;
 }
+
+
+button.reset{
+background-color: #E8AABE;
+position: relative;
+left: 30%;
+font-weight: bold;
+}
+
+.la_princess button{
+    background-color: #F4CFDF;
+}
+
+.la_princess {
+    background: radial-gradient(#CA3C66, #B6D8F2);
+    font-style: italic;
+}
+.la_princess .game{
+    background: radial-gradient( #08C5D1, #F4CFDF);
+}
+
+.la_princess .game{
+    position: relative;
+    margin-top: 0;
+    margin: 0;
+}
+
+.princess_sauve{
+ text-align: center;
+ font-size: 30px;
+ font-weight: bold;
+ 
+}
+
+.princess_sauve:hover{
+    background: linear-gradient( #08C5D1, #F4CFDF);
+}
+
+.princess_sauve .game:hover{
+    background: linear-gradient( #CF5C78, #8CACD3);
+}
+
+.chapter1 .game{
+    background-color: #CA3C66;
+}
+.chapter1 .game:hover{
+    background-color:#B6D8F2 ;
+}
+.chapter1{
+background-color: #B6D8F2;
+}
+
+.chapter1:hover{
+    background-color: #CA3C66;
+    }
